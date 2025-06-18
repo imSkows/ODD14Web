@@ -1,4 +1,4 @@
-# WebProject - User Authentication and Environmental Awareness by Anthony Tran & Ethan Ferrier
+# WebProject - User Authentication and Environmental Awareness
 
 This project provides a **web application** designed to allow users to authenticate, manage their account, take quizzes, and learn about environmental issues related to **pollution** and **overfishing**. It features a **leaderboard** and supports **newsletter subscriptions**. The app is built with **Node.js**, **Express**, and **MySQL**.
 
