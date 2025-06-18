@@ -1,0 +1,52 @@
+header
+  a(href="/home") 
+    img#logotop(src="/images/logo.png", alt="logo")
+  nav
+    ul
+      li: a(href="/") HOME
+      li
+        a(href="#") AQUATIC-LIFE
+        ul.dropdown
+          li: a(href="/pollution") POLLUTION
+          li: a(href="/overfishing") OVERFISHING
+      li: a(href="/about") ABOUT US
+      if locals.isAuthenticated
+        li.accountIndex: a(href="/accountPage") #{locals.username}
+        li.accountIndex: a(href="/logout") Logout
+      else
+        li.accountIndex: a(onclick="toggleAuthForm()") myAccount
+
+  div#authPopup(style=showAuth ? 'display: block;' : 'display: none;')
+    div.darkBG(onclick="document.getElementById('authPopup').style.display='none'")
+    div.auth-container
+      
+      div.loginSide
+        p.titleAuth Login to your account
+        form#loginForm(action="/auth", method="post")
+          div.credInput
+            input(type="email", name="email", placeholder="Email", required)
+            input(type="password", name="password", placeholder="Password", required)
+          button.authButton(type="submit") Login
+          if loginError
+            h4#loginError(style="display: block;") Email or Password is incorrect
+
+      
+      div.separator
+
+      div.RegisterSide
+        p.titleAuth Not registered yet ?
+        form#registerForm(action="/register", method="post")
+          div.credInput
+            input(type="text", name="username", placeholder="Username", required)
+            input(type="email", name="email", placeholder="Email", required)
+            input(type="password", name="password", placeholder="Password", required)
+          button.authButton(type="submit") Register
+
+          if emailExists
+            h4#sameEmail(style="display: block;") Email already registered
+          if usernameExists
+            h4#sameUsername(style="display: block;") Username already taken
+          if registerError
+            p.error-message= registerError
+
+        

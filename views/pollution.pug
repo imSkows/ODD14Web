@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  include partials/header
+
+  section#pollution
+    h1 Water Pollution
+
+    div.container-left
+      img#pollution-beach(src="/images/img1.jpg", alt="Pollution")
+      div.text-right
+        p Organic pollution concerns microorganisms in water such as bacteria and viruses. This type of pollution is characterized by a high rate of fecal coliforms. It mainly comes from feces, household waste, and plant debris.
+
+    div.container-right
+      img#boat(src="/images/img2.jpg", alt="Polluting Boat")
+      div.text-left
+        p Chemical pollution involves nitrates and phosphates found in fertilizers, pesticides, human and veterinary medicines, household products, industrial hydrocarbons, and other highly toxic substances.
+
+    div.container-left
+      img#fishing(src="/images/img3.jpg", alt="Fishing Boat")
+      div.text-right
+        p Solutions to reduce pollution are becoming more frequent as awareness grows. Efforts to clean up the seas and oceans include methods such as using trawlers to collect waste.
+
+  h2#quiztitle TEST YOUR KNOWLEDGE WITH OUR QUIZ!
+
+  div.Quiz
+    img#logoquiz(src="/images/logo.png", alt="logo")
+    div.quiz-content
+      h2#question Question
+      #answer-button
+        button.btn Answer 1
+        button.btn Answer 2
+        button.btn Answer 3
+      button#validation-button Submit
+
+  script(src="/javascripts/pollutionScript.js")
+
+  include partials/footer

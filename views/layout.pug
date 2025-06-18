@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title ODD 14
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="/javascripts/authentification.js")
+    if locals.req && locals.req.cookies.type === 'admin'
+      script(src="/javascripts/adminScript.js")
+  body
+    block content

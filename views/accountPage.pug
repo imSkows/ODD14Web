@@ -1,0 +1,64 @@
+extends layout
+
+block content
+    include partials/header
+    
+    div.account-container
+        h1 Welcome to your myAccount, #{username}!
+        div.moduleAccount
+            div.account-details
+                h2 Account Details
+                form(action="/edit/" + locals.req.cookies.userId, method="post")
+                    div.account-info
+                        p Username:
+                        input(type="text", name="username", value=username, placeholder=username)
+
+                        p Email Address:
+                        input(type="email", name="email", value=email, placeholder=email)
+
+                        p Password:
+                        input(type="password", name="password", value="", placeholder="New password")
+                    
+                    button.save-button(type="submit") Save changes
+                
+                if confirmEdit
+                    h4#confirmEdit(style="display: block;") Changes saved successfully
+                
+            div.leaderboard
+                h2 Leaderboard
+
+                form.searchUser(action="/search", method="post")
+                    input(type="text", name="search", placeholder="Search for a user")
+                    button(type="submit") Search
+
+                table.leaderboard-table
+                    thead
+                        tr
+                            th Rank
+                            th Username
+                            th Points
+                            if user && user.type === 'admin'
+                                th Action
+                    tbody
+                        if users && users.length
+                            each user, index in users
+                                tr(data-user-id=user.id)
+                                    td #{index + 1}
+                                    td #{user.username}
+                                    td #{user.points || 0}
+                                    if locals.req.cookies.type === 'admin'
+                                        td
+                                            button.deleteButton(onclick=`deleteUserAsAdmin(${user.id})`) ✕
+                        else
+                            tr
+                                td(colspan=locals.req.cookies.type === 'admin' ? 4 : 3) No users found
+     
+        div.account-button
+            a(href="/logout")
+                button.logout-button Logout
+            if user && user.type !== 'admin'
+                form(action="/deleteAccount", method="post", style="display: inline;")
+                    button.delete-button(type="submit") Delete Account
+
+    script(src="/javascripts/adminScript.js")
+    include partials/footer

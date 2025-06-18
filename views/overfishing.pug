@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  include partials/header
+
+  section#overfishing
+    h1 Overfishing
+
+    div.container-left
+      img#overfishing1(src="/images/pollution1.jpg", alt="Overfishing")
+      div.text-left
+        p Faced with increasing demand, the seas and oceans are witnessing exponential growth in overfishing, leading to the fragility of marine flora and fauna and threatening certain species.
+
+    div.container-right
+      img#overfishing2(src="/images/pollution2.jpg", alt="Overfishing")
+      div.text-right
+        p In addition to overfishing, aquaculture practices are becoming more widespread to meet growing demand. The ethics of this practice raise many concerns, such as animal welfare and the overproduction of food resources.
+
+    div.container-left
+      img#overfishing3(src="/images/pollution3.jpg", alt="Overfishing")
+      div.text-left
+        p To combat overfishing, various measures have been implemented, such as establishing marine reserves covering 30% of the ocean, enforcing controls against illegal fishing, promoting sustainable fishing, and more.
+
+    h2#quiztitle TEST YOUR KNOWLEDGE WITH OUR QUIZ!
+
+  div.Quiz
+    img#logoquiz(src="/images/logo.png", alt="logo")
+    h2#question Question
+    #answer-button
+      button.btn Answer 1
+      button.btn Answer 2
+      button.btn Answer 3
+    button#validation-button Submit
+
+  script(src="/javascripts/overfishScript.js")
+
+  include partials/footer
