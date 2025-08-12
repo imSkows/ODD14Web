@@ -193,3 +193,10 @@ Default admin credentials:
 - Password: admin
 
 Admin users can delete other accounts from the leaderboard
+
+### User Experience Previews
+
+## Home Page
+
+<img width="1906" height="854" alt="Screenshot 2025-08-12 at 11 41 58 AM" src="https://github.com/user-attachments/assets/ca1a222f-2c53-4ee0-b4cb-0983882cbde7" />
+
