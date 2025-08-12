@@ -200,3 +200,23 @@ Admin users can delete other accounts from the leaderboard
 
 <img width="1906" height="854" alt="Screenshot 2025-08-12 at 11 41 58 AM" src="https://github.com/user-attachments/assets/ca1a222f-2c53-4ee0-b4cb-0983882cbde7" />
 
+## Navigation Bar
+
+<img width="610" height="85" alt="Screenshot 2025-08-12 at 11 43 41 AM" src="https://github.com/user-attachments/assets/af0f8fdf-dc51-4fbf-8082-48c8cd06053f" />
+
+## Quiz Feature
+
+<img width="1551" height="696" alt="Screenshot 2025-08-12 at 11 44 33 AM" src="https://github.com/user-attachments/assets/cfaafea2-c275-41f9-93f8-f88254434ff4" />
+
+## Login Window Pop Up
+
+<img width="1906" height="856" alt="Screenshot 2025-08-12 at 11 44 51 AM" src="https://github.com/user-attachments/assets/128e2b5d-7e88-46f6-a302-13dcaa969fd5" />
+
+## Profile Page (Logged in)
+
+<img width="1903" height="853" alt="Screenshot 2025-08-12 at 11 45 23 AM" src="https://github.com/user-attachments/assets/a4055786-87f2-48c9-acd6-acacf04f90e0" />
+
+
+
+
+
